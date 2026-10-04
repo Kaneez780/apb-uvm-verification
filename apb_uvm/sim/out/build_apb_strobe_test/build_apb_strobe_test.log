@@ -1,0 +1,186 @@
+
+Note-[RT_BS] Larger stack needed
+  Note: Bumping stack limit from 8192 to 8250 Kbytes.
+
+Chronologic VCS simulator copyright 1991-2016
+Contains Synopsys proprietary information.
+Compiler version L-2016.06_Full64; Runtime version L-2016.06_Full64;  Oct  4 22:27 2026
+UVM_INFO /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+
+ VCS Coverage Metrics Release L-2016.06_Full64 Copyright (c) 1991-2016 by Synopsys Inc.
+UVM_INFO ../tb/testbench.sv(79) @ 0: reporter [Testbench] Enter
+VCD+ Writer L-2016.06_Full64 Copyright (c) 1991-2016 by Synopsys Inc.
+UVM_INFO @ 0: reporter [RNTST] Running test apb_strobe_test...
+UVM_INFO ../tb/test.sv(16) @ 0: uvm_test_top [apb_strobe_test] -------TEST BUILD PHASE------------
+
+Note-[FCICIO] Instance coverage is ON
+/root/Downloads/apb_kaneez/sim/../tb/apb_coverege.sv, 15
+$unit, "apb_coverage::apb_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'apb_coverage::apb_cg'
+  
+  Covergroup Instance: tbench_top.me.obj.apb_cg 
+  Design hierarchy: $unit
+
+UVM_INFO ../tb/apb_environment.sv(24) @ 0: uvm_test_top.env1 [Environment] Test buil Phase Executed In build Phase
+UVM_INFO ../tb/apb_agent.sv(21) @ 0: uvm_test_top.env1.agt [agent] Test build Phase Executed In agent
+UVM_INFO ../tb/apb_driver.sv(20) @ 0: uvm_test_top.env1.agt.driver1 [Driver]  Build Phase Executed In Driver
+UVM_INFO ../tb/apb_monitor.sv(30) @ 0: uvm_test_top.env1.agt.monitor [MONITOR] Build phase executed
+UVM_INFO ../tb/apb_scoreboard.sv(103) @ 0: uvm_test_top.env1.scb [SCOREBOARD] Build phase executed
+----------------------------------------------------------------
+Name                         Type                    Size  Value
+----------------------------------------------------------------
+uvm_test_top                 apb_strobe_test         -     @343 
+  env1                       apb_environment         -     @356 
+    agt                      apb_agent               -     @373 
+      driver1                apb_driver              -     @432 
+        rsp_port             uvm_analysis_port       -     @451 
+        seq_item_port        uvm_seq_item_pull_port  -     @441 
+      monitor                apb_monitor             -     @413 
+        item_collected_port  uvm_analysis_port       -     @422 
+      seq1                   apb_sequencer           -     @461 
+        rsp_export           uvm_analysis_export     -     @470 
+        seq_item_export      uvm_seq_item_pull_imp   -     @588 
+        arbitration_queue    array                   0     -    
+        lock_queue           array                   0     -    
+        num_last_reqs        integral                32    'd1  
+        num_last_rsps        integral                32    'd1  
+    cov                      apb_coverage            -     @391 
+      analysis_imp           uvm_analysis_imp        -     @400 
+    scb                      apb_scoreboard          -     @382 
+      item_collected_export  uvm_analysis_imp        -     @611 
+----------------------------------------------------------------
+UVM_INFO ../tb/apb_sequence.sv(605) @ 0: uvm_test_top.env1.agt.seq1@@seq [STROBE_SEQ] APB Strobe Sequence Started
+UVM_INFO ../tb/apb_monitor.sv(134) @ 55: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=1 WDATA=0x1122334455667788 RDATA=0x0000000000000000 STRB=0xff PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(501) @ 55: uvm_test_top.env1.scb [APB_SCB_WRITE] WRITE OK: ADDR=0x00000200 IDX=64 DATA=0x1122334455667788 STRB=0xff MODEL=0x1122334455667788 VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 95: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=0 WDATA=0x0000000000000000 RDATA=0x1122334455667788 STRB=0x00 PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(587) @ 95: uvm_test_top.env1.scb [APB_SCB_READ] READ MATCH: ADDR=0x00000200 IDX=64 EXPECTED=0x1122334455667788 ACTUAL=0x1122334455667788 VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 135: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=1 WDATA=0x00000000000000aa RDATA=0x0000000000000000 STRB=0x01 PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(501) @ 135: uvm_test_top.env1.scb [APB_SCB_WRITE] WRITE OK: ADDR=0x00000200 IDX=64 DATA=0x00000000000000aa STRB=0x01 MODEL=0x11223344556677aa VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 175: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=0 WDATA=0x0000000000000000 RDATA=0x11223344556677aa STRB=0x00 PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(587) @ 175: uvm_test_top.env1.scb [APB_SCB_READ] READ MATCH: ADDR=0x00000200 IDX=64 EXPECTED=0x11223344556677aa ACTUAL=0x11223344556677aa VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 215: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=1 WDATA=0xbb00000000000000 RDATA=0x0000000000000000 STRB=0x80 PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(501) @ 215: uvm_test_top.env1.scb [APB_SCB_WRITE] WRITE OK: ADDR=0x00000200 IDX=64 DATA=0xbb00000000000000 STRB=0x80 MODEL=0xbb223344556677aa VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 255: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=0 WDATA=0x0000000000000000 RDATA=0xbb223344556677aa STRB=0x00 PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(587) @ 255: uvm_test_top.env1.scb [APB_SCB_READ] READ MATCH: ADDR=0x00000200 IDX=64 EXPECTED=0xbb223344556677aa ACTUAL=0xbb223344556677aa VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 295: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=1 WDATA=0x00000000deadbeef RDATA=0x0000000000000000 STRB=0x0f PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(501) @ 295: uvm_test_top.env1.scb [APB_SCB_WRITE] WRITE OK: ADDR=0x00000200 IDX=64 DATA=0x00000000deadbeef STRB=0x0f MODEL=0xbb223344deadbeef VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 335: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=0 WDATA=0x0000000000000000 RDATA=0xbb223344deadbeef STRB=0x00 PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(587) @ 335: uvm_test_top.env1.scb [APB_SCB_READ] READ MATCH: ADDR=0x00000200 IDX=64 EXPECTED=0xbb223344deadbeef ACTUAL=0xbb223344deadbeef VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 375: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=1 WDATA=0xcafebabe00000000 RDATA=0x0000000000000000 STRB=0xf0 PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(501) @ 375: uvm_test_top.env1.scb [APB_SCB_WRITE] WRITE OK: ADDR=0x00000200 IDX=64 DATA=0xcafebabe00000000 STRB=0xf0 MODEL=0xcafebabedeadbeef VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 415: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=0 WDATA=0x0000000000000000 RDATA=0xcafebabedeadbeef STRB=0x00 PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(587) @ 415: uvm_test_top.env1.scb [APB_SCB_READ] READ MATCH: ADDR=0x00000200 IDX=64 EXPECTED=0xcafebabedeadbeef ACTUAL=0xcafebabedeadbeef VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 455: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=1 WDATA=0x0102030405060708 RDATA=0x0000000000000000 STRB=0x55 PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(501) @ 455: uvm_test_top.env1.scb [APB_SCB_WRITE] WRITE OK: ADDR=0x00000200 IDX=64 DATA=0x0102030405060708 STRB=0x55 MODEL=0xca02ba04de06be08 VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 495: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=0 WDATA=0x0000000000000000 RDATA=0xca02ba04de06be08 STRB=0x00 PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(587) @ 495: uvm_test_top.env1.scb [APB_SCB_READ] READ MATCH: ADDR=0x00000200 IDX=64 EXPECTED=0xca02ba04de06be08 ACTUAL=0xca02ba04de06be08 VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 535: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=1 WDATA=0x1020304050607080 RDATA=0x0000000000000000 STRB=0xaa PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(501) @ 535: uvm_test_top.env1.scb [APB_SCB_WRITE] WRITE OK: ADDR=0x00000200 IDX=64 DATA=0x1020304050607080 STRB=0xaa MODEL=0x1002300450067008 VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 575: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=0 WDATA=0x0000000000000000 RDATA=0x1002300450067008 STRB=0x00 PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(587) @ 575: uvm_test_top.env1.scb [APB_SCB_READ] READ MATCH: ADDR=0x00000200 IDX=64 EXPECTED=0x1002300450067008 ACTUAL=0x1002300450067008 VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 615: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=1 WDATA=0x000000000000bbcc RDATA=0x0000000000000000 STRB=0x03 PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(501) @ 615: uvm_test_top.env1.scb [APB_SCB_WRITE] WRITE OK: ADDR=0x00000200 IDX=64 DATA=0x000000000000bbcc STRB=0x03 MODEL=0x100230045006bbcc VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 655: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=0 WDATA=0x0000000000000000 RDATA=0x100230045006bbcc STRB=0x00 PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(587) @ 655: uvm_test_top.env1.scb [APB_SCB_READ] READ MATCH: ADDR=0x00000200 IDX=64 EXPECTED=0x100230045006bbcc ACTUAL=0x100230045006bbcc VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 695: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=1 WDATA=0x00000000ddee0000 RDATA=0x0000000000000000 STRB=0x0c PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(501) @ 695: uvm_test_top.env1.scb [APB_SCB_WRITE] WRITE OK: ADDR=0x00000200 IDX=64 DATA=0x00000000ddee0000 STRB=0x0c MODEL=0x10023004ddeebbcc VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 735: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=0 WDATA=0x0000000000000000 RDATA=0x10023004ddeebbcc STRB=0x00 PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(587) @ 735: uvm_test_top.env1.scb [APB_SCB_READ] READ MATCH: ADDR=0x00000200 IDX=64 EXPECTED=0x10023004ddeebbcc ACTUAL=0x10023004ddeebbcc VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 775: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=1 WDATA=0x0000112200000000 RDATA=0x0000000000000000 STRB=0x30 PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(501) @ 775: uvm_test_top.env1.scb [APB_SCB_WRITE] WRITE OK: ADDR=0x00000200 IDX=64 DATA=0x0000112200000000 STRB=0x30 MODEL=0x10021122ddeebbcc VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 815: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=0 WDATA=0x0000000000000000 RDATA=0x10021122ddeebbcc STRB=0x00 PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(587) @ 815: uvm_test_top.env1.scb [APB_SCB_READ] READ MATCH: ADDR=0x00000200 IDX=64 EXPECTED=0x10021122ddeebbcc ACTUAL=0x10021122ddeebbcc VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 855: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=1 WDATA=0x3344000000000000 RDATA=0x0000000000000000 STRB=0xc0 PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(501) @ 855: uvm_test_top.env1.scb [APB_SCB_WRITE] WRITE OK: ADDR=0x00000200 IDX=64 DATA=0x3344000000000000 STRB=0xc0 MODEL=0x33441122ddeebbcc VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 895: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=0 WDATA=0x0000000000000000 RDATA=0x33441122ddeebbcc STRB=0x00 PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(587) @ 895: uvm_test_top.env1.scb [APB_SCB_READ] READ MATCH: ADDR=0x00000200 IDX=64 EXPECTED=0x33441122ddeebbcc ACTUAL=0x33441122ddeebbcc VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 935: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=1 WDATA=0xaa000000000000bb RDATA=0x0000000000000000 STRB=0x81 PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(501) @ 935: uvm_test_top.env1.scb [APB_SCB_WRITE] WRITE OK: ADDR=0x00000200 IDX=64 DATA=0xaa000000000000bb STRB=0x81 MODEL=0xaa441122ddeebbbb VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 975: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=0 WDATA=0x0000000000000000 RDATA=0xaa441122ddeebbbb STRB=0x00 PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(587) @ 975: uvm_test_top.env1.scb [APB_SCB_READ] READ MATCH: ADDR=0x00000200 IDX=64 EXPECTED=0xaa441122ddeebbbb ACTUAL=0xaa441122ddeebbbb VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 1015: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=1 WDATA=0x00000000cc00dd00 RDATA=0x0000000000000000 STRB=0x18 PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(501) @ 1015: uvm_test_top.env1.scb [APB_SCB_WRITE] WRITE OK: ADDR=0x00000200 IDX=64 DATA=0x00000000cc00dd00 STRB=0x18 MODEL=0xaa441100cceebbbb VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 1055: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=0 WDATA=0x0000000000000000 RDATA=0xaa441100cceebbbb STRB=0x00 PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(587) @ 1055: uvm_test_top.env1.scb [APB_SCB_READ] READ MATCH: ADDR=0x00000200 IDX=64 EXPECTED=0xaa441100cceebbbb ACTUAL=0xaa441100cceebbbb VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 1095: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=1 WDATA=0xffffffffffffffff RDATA=0x0000000000000000 STRB=0x00 PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(501) @ 1095: uvm_test_top.env1.scb [APB_SCB_WRITE] WRITE OK: ADDR=0x00000200 IDX=64 DATA=0xffffffffffffffff STRB=0x00 MODEL=0xaa441100cceebbbb VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 1135: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000200 WRITE=0 WDATA=0x0000000000000000 RDATA=0xaa441100cceebbbb STRB=0x00 PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(587) @ 1135: uvm_test_top.env1.scb [APB_SCB_READ] READ MATCH: ADDR=0x00000200 IDX=64 EXPECTED=0xaa441100cceebbbb ACTUAL=0xaa441100cceebbbb VALID_BYTES=0xff
+UVM_INFO ../tb/apb_sequence.sv(657) @ 1136: uvm_test_top.env1.agt.seq1@@seq [STROBE_SEQ] APB Strobe Sequence Finished
+UVM_INFO /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_objection.svh(1270) @ 1186: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO ../tb/apb_coverege.sv(343) @ 1186: uvm_test_top.env1.cov [APB_COVERAGE] Functional Coverage = 48.81%
+UVM_INFO ../tb/test.sv(35) @ 1186: uvm_test_top [apb_strobe_test] ---------------------------------------
+UVM_INFO ../tb/test.sv(36) @ 1186: uvm_test_top [apb_strobe_test] ----           TEST PASS           ----
+UVM_INFO ../tb/test.sv(37) @ 1186: uvm_test_top [apb_strobe_test] ---------------------------------------
+UVM_INFO /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 1186: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_report_server.svh(894) @ 1186: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   73
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[APB_COVERAGE]     1
+[APB_MONITOR]    28
+[APB_SCB_READ]    14
+[APB_SCB_WRITE]    14
+[Driver]     1
+[Environment]     1
+[MONITOR]     1
+[RNTST]     1
+[SCOREBOARD]     1
+[STROBE_SEQ]     2
+[TEST_DONE]     1
+[Testbench]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[agent]     1
+[apb_strobe_test]     4
+
+$finish called from file "/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time                 1186
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, tgl was monitored
+---------------------------------------------------------------------------
+
+ Coverage status: End of All Coverages ...
+
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1186
+CPU Time:      0.520 seconds;       Data structure size:   0.5Mb
+Sun Oct  4 22:27:04 2026

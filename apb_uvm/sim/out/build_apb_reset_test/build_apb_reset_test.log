@@ -1,0 +1,140 @@
+
+Note-[RT_BS] Larger stack needed
+  Note: Bumping stack limit from 8192 to 8250 Kbytes.
+
+Chronologic VCS simulator copyright 1991-2016
+Contains Synopsys proprietary information.
+Compiler version L-2016.06_Full64; Runtime version L-2016.06_Full64;  Oct  4 22:28 2026
+UVM_INFO /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+
+ VCS Coverage Metrics Release L-2016.06_Full64 Copyright (c) 1991-2016 by Synopsys Inc.
+UVM_INFO ../tb/testbench.sv(79) @ 0: reporter [Testbench] Enter
+VCD+ Writer L-2016.06_Full64 Copyright (c) 1991-2016 by Synopsys Inc.
+UVM_INFO @ 0: reporter [RNTST] Running test apb_reset_test...
+UVM_INFO ../tb/test.sv(16) @ 0: uvm_test_top [apb_reset_test] -------TEST BUILD PHASE------------
+
+Note-[FCICIO] Instance coverage is ON
+/root/Downloads/apb_kaneez/sim/../tb/apb_coverege.sv, 15
+$unit, "apb_coverage::apb_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'apb_coverage::apb_cg'
+  
+  Covergroup Instance: tbench_top.me.obj.apb_cg 
+  Design hierarchy: $unit
+
+UVM_INFO ../tb/apb_environment.sv(24) @ 0: uvm_test_top.env1 [Environment] Test buil Phase Executed In build Phase
+UVM_INFO ../tb/apb_agent.sv(21) @ 0: uvm_test_top.env1.agt [agent] Test build Phase Executed In agent
+UVM_INFO ../tb/apb_driver.sv(20) @ 0: uvm_test_top.env1.agt.driver1 [Driver]  Build Phase Executed In Driver
+UVM_INFO ../tb/apb_monitor.sv(30) @ 0: uvm_test_top.env1.agt.monitor [MONITOR] Build phase executed
+UVM_INFO ../tb/apb_scoreboard.sv(103) @ 0: uvm_test_top.env1.scb [SCOREBOARD] Build phase executed
+----------------------------------------------------------------
+Name                         Type                    Size  Value
+----------------------------------------------------------------
+uvm_test_top                 apb_reset_test          -     @343 
+  env1                       apb_environment         -     @356 
+    agt                      apb_agent               -     @379 
+      driver1                apb_driver              -     @438 
+        rsp_port             uvm_analysis_port       -     @457 
+        seq_item_port        uvm_seq_item_pull_port  -     @447 
+      monitor                apb_monitor             -     @419 
+        item_collected_port  uvm_analysis_port       -     @428 
+      seq1                   apb_sequencer           -     @467 
+        rsp_export           uvm_analysis_export     -     @476 
+        seq_item_export      uvm_seq_item_pull_imp   -     @594 
+        arbitration_queue    array                   0     -    
+        lock_queue           array                   0     -    
+        num_last_reqs        integral                32    'd1  
+        num_last_rsps        integral                32    'd1  
+    cov                      apb_coverage            -     @397 
+      analysis_imp           uvm_analysis_imp        -     @406 
+    scb                      apb_scoreboard          -     @388 
+      item_collected_export  uvm_analysis_imp        -     @617 
+----------------------------------------------------------------
+UVM_INFO ../tb/test.sv(428) @ 0: uvm_test_top [apb_reset_test] APB RESET TEST STARTED
+UVM_INFO ../tb/apb_sequence.sv(905) @ 0: reporter@@reset_seq [RESET_SEQ] Asserting APB reset
+UVM_INFO ../tb/apb_sequence.sv(971) @ 45: reporter@@reset_seq [RESET_SEQ] During RESET: PRESETn=0 PREADY=z PSLVERR=z PRDATA=zzzzzzzzzzzzzzzz
+UVM_INFO ../tb/apb_sequence.sv(998) @ 65: reporter@@reset_seq [RESET_SEQ] APB reset released
+UVM_INFO ../tb/apb_sequence.sv(1045) @ 65: uvm_test_top.env1.agt.seq1@@post_reset_seq [apb_post_reset_sequence] Post-reset APB check started
+UVM_INFO ../tb/apb_monitor.sv(134) @ 115: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000100 WRITE=1 WDATA=0x12345678abcdef01 RDATA=0x0000000000000000 STRB=0xff PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(501) @ 115: uvm_test_top.env1.scb [APB_SCB_WRITE] WRITE OK: ADDR=0x00000100 IDX=32 DATA=0x12345678abcdef01 STRB=0xff MODEL=0x12345678abcdef01 VALID_BYTES=0xff
+UVM_INFO ../tb/apb_monitor.sv(134) @ 155: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000100 WRITE=0 WDATA=0x0000000000000000 RDATA=0x12345678abcdef01 STRB=0x00 PSLVERR=0
+UVM_INFO ../tb/apb_scoreboard.sv(587) @ 155: uvm_test_top.env1.scb [APB_SCB_READ] READ MATCH: ADDR=0x00000100 IDX=32 EXPECTED=0x12345678abcdef01 ACTUAL=0x12345678abcdef01 VALID_BYTES=0xff
+UVM_INFO ../tb/apb_sequence.sv(1093) @ 156: uvm_test_top.env1.agt.seq1@@post_reset_seq [apb_post_reset_sequence] Post-reset APB check finished
+UVM_INFO ../tb/test.sv(451) @ 156: uvm_test_top [apb_reset_test] APB RESET TEST FINISHED
+UVM_INFO /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_objection.svh(1270) @ 206: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO ../tb/apb_coverege.sv(343) @ 206: uvm_test_top.env1.cov [APB_COVERAGE] Functional Coverage = 35.48%
+UVM_INFO ../tb/test.sv(35) @ 206: uvm_test_top [apb_reset_test] ---------------------------------------
+UVM_INFO ../tb/test.sv(36) @ 206: uvm_test_top [apb_reset_test] ----           TEST PASS           ----
+UVM_INFO ../tb/test.sv(37) @ 206: uvm_test_top [apb_reset_test] ---------------------------------------
+UVM_INFO /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 206: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_report_server.svh(894) @ 206: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   26
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[APB_COVERAGE]     1
+[APB_MONITOR]     2
+[APB_SCB_READ]     1
+[APB_SCB_WRITE]     1
+[Driver]     1
+[Environment]     1
+[MONITOR]     1
+[RESET_SEQ]     3
+[RNTST]     1
+[SCOREBOARD]     1
+[TEST_DONE]     1
+[Testbench]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[agent]     1
+[apb_post_reset_sequence]     2
+[apb_reset_test]     6
+
+$finish called from file "/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time                  206
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, tgl was monitored
+---------------------------------------------------------------------------
+
+ Coverage status: End of All Coverages ...
+
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 206
+CPU Time:      0.510 seconds;       Data structure size:   0.5Mb
+Sun Oct  4 22:28:21 2026

@@ -1,0 +1,142 @@
+
+Note-[RT_BS] Larger stack needed
+  Note: Bumping stack limit from 8192 to 8250 Kbytes.
+
+Chronologic VCS simulator copyright 1991-2016
+Contains Synopsys proprietary information.
+Compiler version L-2016.06_Full64; Runtime version L-2016.06_Full64;  Oct  4 22:24 2026
+UVM_INFO /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+
+ VCS Coverage Metrics Release L-2016.06_Full64 Copyright (c) 1991-2016 by Synopsys Inc.
+UVM_INFO ../tb/testbench.sv(79) @ 0: reporter [Testbench] Enter
+VCD+ Writer L-2016.06_Full64 Copyright (c) 1991-2016 by Synopsys Inc.
+UVM_INFO @ 0: reporter [RNTST] Running test apb_addr_misaligned_test...
+UVM_INFO ../tb/test.sv(16) @ 0: uvm_test_top [apb_addr_misaligned_test] -------TEST BUILD PHASE------------
+
+Note-[FCICIO] Instance coverage is ON
+/root/Downloads/apb_kaneez/sim/../tb/apb_coverege.sv, 15
+$unit, "apb_coverage::apb_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'apb_coverage::apb_cg'
+  
+  Covergroup Instance: tbench_top.me.obj.apb_cg 
+  Design hierarchy: $unit
+
+UVM_INFO ../tb/apb_environment.sv(24) @ 0: uvm_test_top.env1 [Environment] Test buil Phase Executed In build Phase
+UVM_INFO ../tb/apb_agent.sv(21) @ 0: uvm_test_top.env1.agt [agent] Test build Phase Executed In agent
+UVM_INFO ../tb/apb_driver.sv(20) @ 0: uvm_test_top.env1.agt.driver1 [Driver]  Build Phase Executed In Driver
+UVM_INFO ../tb/apb_monitor.sv(30) @ 0: uvm_test_top.env1.agt.monitor [MONITOR] Build phase executed
+UVM_INFO ../tb/apb_scoreboard.sv(103) @ 0: uvm_test_top.env1.scb [SCOREBOARD] Build phase executed
+------------------------------------------------------------------
+Name                         Type                      Size  Value
+------------------------------------------------------------------
+uvm_test_top                 apb_addr_misaligned_test  -     @343 
+  env1                       apb_environment           -     @356 
+    agt                      apb_agent                 -     @373 
+      driver1                apb_driver                -     @432 
+        rsp_port             uvm_analysis_port         -     @451 
+        seq_item_port        uvm_seq_item_pull_port    -     @441 
+      monitor                apb_monitor               -     @413 
+        item_collected_port  uvm_analysis_port         -     @422 
+      seq1                   apb_sequencer             -     @461 
+        rsp_export           uvm_analysis_export       -     @470 
+        seq_item_export      uvm_seq_item_pull_imp     -     @588 
+        arbitration_queue    array                     0     -    
+        lock_queue           array                     0     -    
+        num_last_reqs        integral                  32    'd1  
+        num_last_rsps        integral                  32    'd1  
+    cov                      apb_coverage              -     @391 
+      analysis_imp           uvm_analysis_imp          -     @400 
+    scb                      apb_scoreboard            -     @382 
+      item_collected_export  uvm_analysis_imp          -     @611 
+------------------------------------------------------------------
+UVM_INFO ../tb/apb_sequence.sv(695) @ 0: uvm_test_top.env1.agt.seq1@@seq [MISALIGNED_SEQ] APB Misaligned Address Sequence Started
+UVM_INFO ../tb/apb_monitor.sv(134) @ 55: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000101 WRITE=1 WDATA=0xa100000000000000 RDATA=0x0000000000000000 STRB=0xff PSLVERR=1
+UVM_INFO ../tb/apb_monitor.sv(134) @ 95: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000101 WRITE=0 WDATA=0x0000000000000000 RDATA=0x0000000000000000 STRB=0x00 PSLVERR=1
+UVM_INFO ../tb/apb_monitor.sv(134) @ 135: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000102 WRITE=1 WDATA=0xa100000000000001 RDATA=0x0000000000000000 STRB=0xff PSLVERR=1
+UVM_INFO ../tb/apb_monitor.sv(134) @ 175: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000102 WRITE=0 WDATA=0x0000000000000000 RDATA=0x0000000000000000 STRB=0x00 PSLVERR=1
+UVM_INFO ../tb/apb_monitor.sv(134) @ 215: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000103 WRITE=1 WDATA=0xa100000000000002 RDATA=0x0000000000000000 STRB=0xff PSLVERR=1
+UVM_INFO ../tb/apb_monitor.sv(134) @ 255: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000103 WRITE=0 WDATA=0x0000000000000000 RDATA=0x0000000000000000 STRB=0x00 PSLVERR=1
+UVM_INFO ../tb/apb_monitor.sv(134) @ 295: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000104 WRITE=1 WDATA=0xa100000000000003 RDATA=0x0000000000000000 STRB=0xff PSLVERR=1
+UVM_INFO ../tb/apb_monitor.sv(134) @ 335: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000104 WRITE=0 WDATA=0x0000000000000000 RDATA=0x0000000000000000 STRB=0x00 PSLVERR=1
+UVM_INFO ../tb/apb_monitor.sv(134) @ 375: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000105 WRITE=1 WDATA=0xa100000000000004 RDATA=0x0000000000000000 STRB=0xff PSLVERR=1
+UVM_INFO ../tb/apb_monitor.sv(134) @ 415: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000105 WRITE=0 WDATA=0x0000000000000000 RDATA=0x0000000000000000 STRB=0x00 PSLVERR=1
+UVM_INFO ../tb/apb_monitor.sv(134) @ 455: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000106 WRITE=1 WDATA=0xa100000000000005 RDATA=0x0000000000000000 STRB=0xff PSLVERR=1
+UVM_INFO ../tb/apb_monitor.sv(134) @ 495: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000106 WRITE=0 WDATA=0x0000000000000000 RDATA=0x0000000000000000 STRB=0x00 PSLVERR=1
+UVM_INFO ../tb/apb_monitor.sv(134) @ 535: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000107 WRITE=1 WDATA=0xa100000000000006 RDATA=0x0000000000000000 STRB=0xff PSLVERR=1
+UVM_INFO ../tb/apb_monitor.sv(134) @ 575: uvm_test_top.env1.agt.monitor [APB_MONITOR] TRANSFER: ADDR=0x00000107 WRITE=0 WDATA=0x0000000000000000 RDATA=0x0000000000000000 STRB=0x00 PSLVERR=1
+UVM_INFO ../tb/apb_sequence.sv(774) @ 576: uvm_test_top.env1.agt.seq1@@seq [MISALIGNED_SEQ] APB Misaligned Address Sequence Finished
+UVM_INFO /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_objection.svh(1270) @ 626: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO ../tb/apb_coverege.sv(343) @ 626: uvm_test_top.env1.cov [APB_COVERAGE] Functional Coverage = 56.90%
+UVM_INFO ../tb/test.sv(35) @ 626: uvm_test_top [apb_addr_misaligned_test] ---------------------------------------
+UVM_INFO ../tb/test.sv(36) @ 626: uvm_test_top [apb_addr_misaligned_test] ----           TEST PASS           ----
+UVM_INFO ../tb/test.sv(37) @ 626: uvm_test_top [apb_addr_misaligned_test] ---------------------------------------
+UVM_INFO /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 626: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_report_server.svh(894) @ 626: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   31
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[APB_COVERAGE]     1
+[APB_MONITOR]    14
+[Driver]     1
+[Environment]     1
+[MISALIGNED_SEQ]     2
+[MONITOR]     1
+[RNTST]     1
+[SCOREBOARD]     1
+[TEST_DONE]     1
+[Testbench]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[agent]     1
+[apb_addr_misaligned_test]     4
+
+$finish called from file "/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time                  626
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, tgl was monitored
+---------------------------------------------------------------------------
+
+ Coverage status: End of All Coverages ...
+
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 626
+CPU Time:      0.530 seconds;       Data structure size:   0.5Mb
+Sun Oct  4 22:24:34 2026
